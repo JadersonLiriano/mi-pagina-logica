@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programación: Guía Completa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Fondo de imagen con degradado para legibilidad */
+            background-image: linear-gradient(rgba(240, 244, 248, 0.9), rgba(240, 244, 248, 0.9)), url('http://googleusercontent.com/file_content/1'); /* los-mejores-lenguajes-de-programacion-en-el-desarrollo-web-y-su-importancia-en-la-era-digital.jpg */
+            background-size: cover;
+            background-attachment: fixed; /* Efecto parallax */
+            background-position: center center;
+            color: #1a202c; /* Color de texto principal más oscuro para contraste */
+            line-height: 1.6; /* Ligeramente reducido para mejor lectura */
+        }
+        .section-heading {
+            @apply text-4xl md:text-5xl font-extrabold text-black mb-6 pb-2 border-b-4 border-cyan-600 flex items-center justify-center text-center;
+        }
+        .section-heading .sticker {
+            @apply text-5xl md:text-6xl mr-4; /* Tamaño del sticker */
+            animation: bounce 2s infinite; /* Animación de rebote */
+        }
+        .subsection-heading {
+            @apply text-2xl font-semibold text-cyan-800 mb-4;
+        }
+        .content-block {
+            @apply bg-white p-6 rounded-lg shadow-xl mb-8 border border-gray-200;
+        }
+        .concept-image {
+            @apply w-full h-48 md:h-64 object-cover rounded-lg mb-4 shadow-md;
+            animation: fadeIn 1.5s ease-out; /* Animación de aparición para las imágenes */
+        }
+
+        /* Keyframes para la animación de rebote */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+        /* Keyframes para la animación de aparición */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-slate-900 text-white shadow-lg py-4 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold">Trabajo de Jaderson y Yandel</h1>
+    </header>
+
+    <nav class="bg-white shadow-md sticky top-0 z-50 py-3">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-2xl font-bold text-cyan-700 mb-2 md:mb-0">Guía de Lógica de Programación</h1>
+            <ul class="flex flex-wrap justify-center space-x-3 md:space-x-6 text-sm md:text-base font-medium text-slate-600">
+                <li><a class="hover:text-cyan-700 transition duration-300" href="#estilo">Estilo</a></li>
+                <li><a class="hover:text-cyan-700 transition duration-300" href="#estructura">Estructura</a></li>
+                <li><a class="hover:text-cyan-700 transition duration-300" href="#diseno">Diseño</a></li>
+                <li><a class="hover:text-cyan-700 transition duration-300" href="#codificacion">Codificación</a></li>
+                <li><a class="hover:text-cyan-700 transition duration-300" href="#ejecucion">Ejecución</a></li>
+                <li><a class="hover:text-cyan-700 transition duration-300" href="#e_s">E/S</a></li>
+                <li><a class="hover:text-cyan-700 transition duration-300" href="#documentacion">Documentación</a></li>
+                <li><a class="hover:text-cyan-700 transition duration-300" href="#gestion_analisis">Gestión</a></li>
+                <li><a class="hover:text-cyan-700 transition duration-300" href="#archivos">Archivos</a></li>
+                <li><a class="hover:text-cyan-700 transition duration-300" href="#organizacion_archivos">Organización</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-4 md:p-8 max-w-7xl">
+        
+        <section id="introduccion" class="my-12 py-8 bg-white rounded-lg shadow-lg text-center">
+            <h2 class="text-4xl font-bold text-slate-800 mb-4">Principios Fundamentales de la Lógica de Programación</h2>
+            <p class="text-lg text-slate-700 max-w-3xl mx-auto">
+                La lógica de programación es la base para construir software robusto y eficiente. Transforma problemas complejos en instrucciones claras para la máquina, enfocándose en soluciones comprensibles y escalables. Esta guía explora pilares esenciales, desde el estilo de código hasta la gestión de datos persistentes, garantizando software de alta calidad.
+            </p>
+        </section>
+
+        <section id="estilo" class="my-12">
+            <h2 class="section-heading"><span class="sticker">✨</span> Introducción al Estilo de Programación</h2>
+            <div class="content-block">
+                <img src="https://placehold.co/600x250/E0E7FF/1A202C?text=Código+Limpio+y+Estilizado" alt="Imagen de un código bien formateado y limpio" class="concept-image">
+                <p class="text-slate-700 mb-4">El estilo de programación es un conjunto de reglas y convenciones para escribir código legible y consistente. Es crucial para la legibilidad, coherencia y mantenibilidad del software. Un estilo consistente facilita la comprensión del código por otros desarrolladores (y por uno mismo en el futuro), reduciendo la "fatiga cognitiva". Esto es indispensable en equipos, mejorando la colaboración y acelerando la revisión de código, lo que se traduce en menores costos de mantenimiento y mayor calidad del producto final.</p>
+            </div>
+            
+            <div class="content-block">
+                <h3 class="subsection-heading">Nombres de Variables</h3>
+                <p class="text-slate-700 mb-4">Elegir nombres significativos para variables, funciones y otros identificadores es fundamental. Un nombre debe ser autoexplicativo, indicando claramente el propósito. Evite abreviaturas ambiguas o nombres genéricos. Por ejemplo, use `temperaturaCelsius` en lugar de `t`. Nombres claros reducen la necesidad de comentarios y hacen que la lógica del programa sea intuitiva, minimizando errores y mejorando la comprensión del código.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-heading">Comentarios</h3>
+                <p class="text-slate-700 mb-4">Los comentarios son anotaciones en el código que explican su funcionamiento, especialmente la lógica compleja o decisiones de diseño no obvias. Son esenciales para añadir contexto y el "por qué" de ciertas implementaciones. Sin embargo, deben ser relevantes y concisos; un exceso de comentarios triviales o desactualizados puede ser perjudicial. Es crucial mantenerlos actualizados a medida que el código evoluciona para evitar confusiones.</p>
+            </div>
+        </section>
+
+        <section id="estructura" class="my-12">
+            <h2 class="section-heading"><span class="sticker">🏛️</span> Estructura del Programa</h2>
+            <div class="content-block">
+                <img src="https://placehold.co/600x250/E0E7FF/1A202C?text=Arquitectura+de+Software" alt="Imagen de un diagrama de arquitectura de software" class="concept-image">
+                <p class="text-slate-700 mb-4">La estructura del programa se refiere a la organización lógica de sus componentes. Un programa bien estructurado se divide en unidades más pequeñas y manejables, como funciones o módulos, cada una con una responsabilidad clara. Esta organización facilita la comprensión del programa en su conjunto, permitiendo a los desarrolladores concentrarse en partes específicas. Promueve la alta cohesión (elementos relacionados trabajan juntos) y el bajo acoplamiento (unidades independientes), principios clave para software robusto, escalable y fácil de probar y adaptar.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-heading">Estructura Modular</h3>
+                <p class="text-slate-700 mb-4">La estructura modular organiza el software en módulos independientes e intercambiables, cada uno encapsulando funcionalidades específicas. Esto fomenta la reusabilidad del código, simplifica el mantenimiento (cambios en un módulo tienen impacto limitado), mejora las pruebas (módulos probados aisladamente) y optimiza la colaboración en equipos grandes. El diseño modular implica identificar responsabilidades claras y definir interfaces precisas entre módulos para minimizar dependencias.</p>
+            </div>
+        </section>
+
+        <section id="diseno" class="my-12">
+            <h2 class="section-heading"><span class="sticker">📐</span> Diseño de Programas</h2>
+            <div class="content-block">
+                <img src="https://placehold.co/600x250/E0E7FF/1A202C?text=Fase+de+Diseño" alt="Imagen de un diseñador trabajando en un diagrama de flujo" class="concept-image">
+                <p class="text-slate-700 mb-4">El diseño de programas es la fase donde se planifica cómo se construirá el sistema para satisfacer los requisitos. Transforma el "qué" (requisitos) en un plan detallado de "cómo". Abarca desde la arquitectura general hasta el diseño de módulos y estructuras de datos. Un buen diseño es fundamental para la calidad del software, impactando en su eficiencia, mantenibilidad, escalabilidad y seguridad. Implica tomar decisiones sobre patrones de diseño y algoritmos, buscando soluciones óptimas y adaptables a futuros cambios, a menudo usando pseudocódigo o diagramas.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-heading">Diseño Descendente (Top-Down Design)</h3>
+                <p class="text-slate-700 mb-4">El diseño descendente descompone un problema principal en subproblemas más pequeños y manejables, de forma progresiva. Este enfoque ayuda a abordar la complejidad dividiéndola en partes simples hasta que cada una puede ser resuelta directamente. Por ejemplo, un sistema de gestión de biblioteca se descompone en "gestionar usuarios", "libros" y "préstamos". Esta metodología mantiene una visión clara de la estructura general y facilita la integración de componentes.</p>
+            </div>
+        </section>
+
+        <section id="codificacion" class="my-12">
+            <h2 class="section-heading"><span class="sticker">💻</span> Codificación</h2>
+            <div class="content-block">
+                <img src="https://placehold.co/600x250/E0E7FF/1A202C?text=Desarrollo+de+Código" alt="Imagen de un desarrollador escribiendo código" class="concept-image">
+                <p class="text-slate-700 mb-4">La codificación es la fase donde el diseño se traduce a un lenguaje de programación específico. Es crucial adherirse a los principios de diseño y estilo: nombres significativos, comentarios adecuados, indentación consistente y aplicación de patrones de diseño. Un código limpio y organizado facilita la depuración y las pruebas, siendo fundamental para el mantenimiento futuro. Los desarrolladores deben escribir código que no solo funcione, sino que sea legible, eficiente y robusto. La refactorización es una práctica continua para mejorar la calidad del código a lo largo del tiempo.</p>
+            </div>
+        </section>
+
+        <section id="ejecucion" class="my-12">
+            <h2 class="section-heading"><span class="sticker">🚀</span> Ejecución y Puesta a Punto de Programa</h2>
+            <div class="content-block">
+                <img src="https://placehold.co/600x250/E0E7FF/1A202C?text=Pruebas+y+Depuración" alt="Imagen de una consola de depuración con código" class="concept-image">
+                <p class="text-slate-700 mb-4">La ejecución implica que el código fuente es procesado por la máquina. Luego, la puesta a punto (pruebas y depuración) identifica y corrige errores. Esto incluye pruebas unitarias (componentes), de integración (interacción) y de sistema (completo). La depuración, con herramientas especializadas, permite ejecutar el código paso a paso para rastrear problemas. Una puesta a punto rigurosa es vital para asegurar la fiabilidad y el correcto funcionamiento del software antes de su despliegue, minimizando fallos y mejorando la experiencia del usuario.</p>
+            </div>
+        </section>
+
+        <section id="e_s" class="my-12">
+            <h2 class="section-heading"><span class="sticker">↔️</span> Manipulación de Entrada / Salida (E/S)</h2>
+            <div class="content-block">
+                <img src="https://placehold.co/600x250/E0E7FF/1A202C?text=Flujo+de+Datos" alt="Imagen de un diagrama de flujo de datos" class="concept-image">
+                <p class="text-slate-700 mb-4">La manipulación de E/S permite al programa interaccionar con el mundo exterior: recibir datos (teclado, archivos, red) y presentar resultados (pantalla, impresoras, archivos). Es crucial para la interactividad y la persistencia de información. Implica usar funciones específicas del lenguaje y gestionar búferes para transferir datos eficientemente. El manejo de errores es vital, ya que las operaciones de E/S son propensas a fallos (ej., archivo no encontrado, disco lleno). Los programas robustos deben gestionar estos errores para evitar caídas y asegurar la integridad de los datos.</p>
+            </div>
+        </section>
+
+        <section id="documentacion" class="my-12">
+            <h2 class="section-heading"><span class="sticker">📚</span> Estructura de Programas y Documentación</h2>
+            <div class="content-block">
+                <img src="https://placehold.co/600x250/E0E7FF/1A202C?text=Documentación+Técnica" alt="Imagen de documentos técnicos y manuales de software" class="concept-image">
+                <p class="text-slate-700 mb-4">La documentación es esencial en cualquier proyecto de software, tan importante como el código. Describe el software, su funcionamiento, diseño y uso. Es vital para la mantenibilidad, la incorporación de nuevos miembros al equipo, la comunicación y la resolución de problemas. Se divide en interna y externa. La falta de documentación adecuada puede llevar a errores, duplicidad y altos costos de mantenimiento. Es una inversión estratégica que garantiza la calidad y adaptabilidad del software a largo plazo.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-heading">Documentación Interna</h3>
+                <p class="text-slate-700 mb-4">La documentación interna se encuentra dentro del código fuente. Su propósito es ayudar a los desarrolladores a entender la implementación, incluyendo comentarios que explican lógica compleja, decisiones de diseño o el propósito de funciones. También abarca el uso de nombres significativos y un formato limpio. Es crucial para la depuración, refactorización y para que otros programadores comprendan rápidamente el código. Es la primera línea de ayuda y debe mantenerse actualizada con el código.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-heading">Documentación Externa</h3>
+                <p class="text-slate-700 mb-4">La documentación externa existe fuera del código fuente y está dirigida a audiencias diversas: usuarios finales, administradores y otros desarrolladores. Incluye manuales de usuario, guías técnicas, de instalación y especificaciones de API. Su propósito es proporcionar una visión completa del sistema, desde su uso hasta su operación y mantenimiento. Una documentación externa bien elaborada es fundamental para la usabilidad del software, su correcta implementación y la transferencia de conocimiento.</p>
+            </div>
+        </section>
+
+        <section id="gestion_analisis" class="my-12">
+            <h2 class="section-heading"><span class="sticker">📈</span> Definición de Gestión (Análisis)</h2>
+            <div class="content-block">
+                <img src="https://placehold.co/600x250/E0E7FF/1A202C?text=Análisis+de+Negocio" alt="Imagen de personas analizando gráficos y datos" class="concept-image">
+                <p class="text-slate-700 mb-4">En el desarrollo de software, la gestión en su fase de análisis implica comprender a fondo un problema o necesidad de negocio para definir qué debe lograr un sistema informático. Es crucial porque un análisis deficiente puede llevar a construir un software que no resuelve el problema real. El análisis implica recopilar, estudiar e interpretar información de diversas fuentes para identificar requisitos, restricciones y objetivos. Es una fase donde la comunicación y la abstracción son clave para traducir necesidades de negocio en especificaciones claras para el diseño y la codificación.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-heading">Análisis de Oportunidad</h3>
+                <p class="text-slate-700 mb-4">El análisis de oportunidad evalúa la viabilidad y el potencial de un nuevo sistema. Determina si es deseable y factible invertir recursos. Considera viabilidad técnica (tecnología, habilidades), económica (beneficios vs. costos), operativa (integración con procesos) y legal/ética. Identifica problemas actuales, necesidades no satisfechas y oportunidades de mejora, proyectando beneficios y riesgos. Es una etapa estratégica para decidir si el proyecto debe avanzar.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-heading">Análisis Funcional</h3>
+                <p class="text-slate-700 mb-4">El análisis funcional define "qué" debe hacer el sistema desde la perspectiva del usuario. Identifica y detalla los requisitos funcionales: funciones, servicios, datos procesados y respuestas a entradas. Se usan casos de uso, historias de usuario o prototipos para capturar y validar requisitos con stakeholders. El resultado es un conjunto claro de especificaciones que describen el comportamiento deseado, sirviendo como contrato entre el equipo de desarrollo y los clientes, y asegurando que el software cumpla las expectativas.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-heading">Análisis Orgánico</h3>
+                <p class="text-slate-700 mb-4">El análisis orgánico define "cómo" el sistema realizará las funciones. Detalla la arquitectura interna del software, la descomposición en módulos, interfaces y diseño de estructuras de datos. Se toman decisiones sobre tecnologías, algoritmos clave y mecanismos de comunicación. Su objetivo es asegurar un diseño eficiente, escalable, seguro y fácil de mantener. Este análisis traduce los requisitos funcionales en un plan técnico detallado para la codificación, sentando las bases para una implementación efectiva.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-heading">Explotación</h3>
+                <p class="text-slate-700 mb-4">La fase de explotación se refiere a la operación y mantenimiento continuo del software después de su despliegue. Incluye monitoreo de rendimiento, gestión de incidencias (resolución de errores), aplicación de actualizaciones y mejoras, y soporte al usuario. Es una fase continua que asegura que el sistema siga siendo funcional, relevante y eficiente a lo largo del tiempo, maximizando su valor para la organización. Es donde el software demuestra su verdadero valor en el mundo real.</p>
+            </div>
+        </section>
+
+        <section id="archivos" class="my-12">
+            <h2 class="section-heading"><span class="sticker">🗄️</span> Archivos (Ficheros)</h2>
+            <div class="content-block">
+                <img src="https://placehold.co/600x250/E0E7FF/1A202C?text=Gestión+de+Archivos" alt="Imagen de una pila de archivos y carpetas digitales" class="concept-image">
+                <h3 class="subsection-heading">Noción de Archivo: Estructura Jerárquica</h3>
+                <p class="text-slate-700 mb-4">Un archivo es una colección organizada de datos almacenada persistentemente en un medio secundario (disco duro, SSD). Permite que la información no se pierda al finalizar un programa. La información se organiza jerárquicamente, desde unidades pequeñas a grandes colecciones:</p>
+                <ul class="list-disc list-inside text-slate-700 ml-4 mt-4">
+                    <li><strong>Campo:</strong> Unidad de dato más pequeña, atributo de una entidad (ej., "Nombre", "Salario").</li>
+                    <li><strong>Registro:</strong> Colección de campos relacionados que describen una entidad (ej., todos los datos de un "Empleado").</li>
+                    <li><strong>Archivos (Ficheros):</strong> Colección de registros relacionados, todos con la misma estructura. Forma básica de almacenar grandes volúmenes de datos.</li>
+                    <li><strong>Bases de Datos:</strong> Colección organizada de archivos interrelacionados (tablas). Ofrecen mecanismos avanzados para almacenar, recuperar y gestionar datos de forma eficiente y segura, superando limitaciones de archivos individuales.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="terminologia" class="my-12">
+            <h2 class="section-heading"><span class="sticker">🔑</span> Conceptos y Definiciones (Terminología de Archivos)</h2>
+            <div class="content-block">
+                <img src="https://placehold.co/600x250/E0E7FF/1A202C?text=Clave+de+Datos" alt="Imagen de una llave digital representando una clave de datos" class="concept-image">
+                <h3 class="subsection-heading">Clave (Indicativo)</h3>
+                <p class="text-slate-700 mb-4">Una clave es uno o más campos dentro de un registro que lo identifican de forma única o establecen un orden. Es fundamental para buscar, recuperar y ordenar registros. La eficiencia de las operaciones de archivo a menudo depende de la elección y el manejo de estas claves. Por ejemplo, el "ID de Cliente" es una clave primaria.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-heading">Registro Físico o Bloque</h3>
+                <p class="text-slate-700 mb-4">Es la unidad de datos que se transfiere entre la memoria principal y el dispositivo de almacenamiento secundario en una sola operación de E/S. Un bloque puede contener uno o varios registros lógicos. Leer y escribir en bloques es más eficiente que hacerlo registro por registro, minimizando accesos al disco, que son operaciones lentas.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-heading">Factor de Bloqueo</h3>
+                <p class="text-slate-700 mb-4">Es el número de registros lógicos que caben dentro de un registro físico o bloque. Un factor de bloqueo mayor significa que se leen o escriben más registros lógicos en cada operación de E/S, mejorando la eficiencia al reducir accesos al disco. Sin embargo, un factor excesivamente grande puede desperdiciar espacio o usar más memoria principal.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-heading">Soportes Secuenciales y Direccionables</h3>
+                <p class="text-slate-700 mb-4">Los soportes de almacenamiento se clasifican por su forma de acceso a los datos:
+                    <ul class="list-disc list-inside text-slate-700 ml-4 mt-2">
+                        <li><strong>Soportes Secuenciales:</strong> Acceso a datos solo en orden consecutivo. Para leer un dato, se deben leer todos los anteriores (ej., cintas magnéticas). Eficientes para procesamiento por lotes.</li>
+                        <li><strong>Soportes Direccionables (o de Acceso Directo/Aleatorio):</strong> Permiten acceder a cualquier dato directamente, sin leer los anteriores. La ubicación se calcula (ej., discos duros, SSDs). Ideales para acceso rápido a registros individuales.</li>
+                    </ul>
+                </p>
+            </div>
+        </section>
+
+        <section id="organizacion_archivos" class="my-12">
+            <h2 class="section-heading"><span class="sticker">🗂️</span> Organización de Archivos</h2>
+            <div class="content-block">
+                <img src="https://placehold.co/600x250/E0E7FF/1A202C?text=Organización+de+Archivos" alt="Imagen de un diagrama de organización de datos o archivos" class="concept-image">
+                <p class="text-slate-700 mb-4">La organización de archivos define cómo los registros se estructuran y almacenan físicamente. La elección impacta directamente en la eficiencia de operaciones como búsqueda, inserción, eliminación y actualización. Una organización adecuada es crucial para optimizar el rendimiento de aplicaciones con grandes volúmenes de datos.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-heading">Organización Secuencial</h3>
+                <p class="text-slate-700 mb-4">Los registros se almacenan uno tras otro en orden. Para acceder a un registro, se leen todos los anteriores.
+                    <ul class="list-disc list-inside text-slate-700 ml-4 mt-2">
+                        <li><strong>Ventajas:</strong> Simple, eficiente para procesamiento por lotes (procesar todo el archivo).</li>
+                        <li><strong>Desventajas:</strong> Muy ineficiente para búsquedas directas o actualizaciones en medio del archivo (requiere reescritura).</li>
+                        <li><strong>Uso Típico:</strong> Archivos de logs, backups, procesamiento de nóminas.</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-heading">Organización Directa</h3>
+                <p class="text-slate-700 mb-4">Acceso inmediato a registros usando una clave que se mapea a una dirección física (función hash).
+                    <ul class="list-disc list-inside text-slate-700 ml-4 mt-2">
+                        <li><strong>Ventajas:</strong> Acceso extremadamente rápido a registros individuales, eficiente en inserción/eliminación/actualización.</li>
+                        <li><strong>Desventajas:</strong> Puede haber desperdicio de espacio, complejidad en manejo de colisiones.</li>
+                        <li><strong>Uso Típico:</strong> Bases de datos (acceso por clave primaria), sistemas de inventario en tiempo real.</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-heading">Organización Indexada</h3>
+                <p class="text-slate-700 mb-4">Combina ventajas: registros secuenciales + un índice separado que contiene claves y direcciones. Para encontrar un registro, se busca en el índice y luego se accede directamente al archivo principal.
+                    <ul class="list-disc list-inside text-slate-700 ml-4 mt-2">
+                        <li><strong>Ventajas:</strong> Permite acceso secuencial y directo, buen rendimiento general. Múltiples índices para búsquedas por diferentes claves.</li>
+                        <li><strong>Desventajas:</strong> Requiere espacio adicional para el índice, mayor complejidad y sobrecarga en la gestión del índice (actualización).</li>
+                        <li><strong>Uso Típico:</strong> Bases de datos relacionales (tablas con índices), sistemas de archivos modernos.</li>
+                    </ul>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-white py-6 text-center text-sm">
+        <p>&copy; 2025 Lógica de Programación. Todos los derechos reservados.</p>
+        <p class="mt-2">Maestro Facilitador: Oliver Coco</p>
+        <p class="mt-2">Creada por Jaderson Liriano, con el diseño de Elian Cardenas, y la participación en estructura y desarrollo de Joel Andrez y Jeremias Medina.</p>
+        <p class="mt-2">Para más información, puedes visitar: <a href="https://achirou.com/introduccion-a-la-programacion/" target="_blank" class="text-cyan-400 hover:underline">Introducción a la Programación</a></p>
+    </footer>
+
+</body>
+</html>
